@@ -28,4 +28,24 @@ class Song
     song.save
     song
   end
+
+  def self.find_by_name(name)
+    @@all.find do |song|
+      song.name == name
+    end
+  end
+
+  def self.find_or_create_by_name(name)
+    if find_by_name(name)
+      return find_by_name
+    else
+      create_by_name(name)
+    end
+  end
+
+  def self.alphabetical
+    @@all.sort_by |object|
+      object.name
+    end
+  end
 end
