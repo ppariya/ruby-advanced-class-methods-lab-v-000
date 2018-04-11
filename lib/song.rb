@@ -37,7 +37,7 @@ class Song
 
   def self.find_or_create_by_name(name)
     if find_by_name(name)
-      return find_by_name
+      return find_by_name(name)
     else
       create_by_name(name)
     end
@@ -54,4 +54,6 @@ class Song
     song.name = row[1].chomp!(".mp3")
     song
   end
+
+  
 end
