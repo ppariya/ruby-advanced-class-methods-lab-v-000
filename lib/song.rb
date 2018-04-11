@@ -45,6 +45,6 @@ class Song
 
   def self.alphabetical
     @@all.sort_by {|object| object.name}
-    
+
   end
 end
