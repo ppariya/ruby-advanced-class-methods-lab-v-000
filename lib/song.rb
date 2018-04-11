@@ -27,4 +27,5 @@ class Song
     song.name = name
     song.save
     song
+  end
 end
